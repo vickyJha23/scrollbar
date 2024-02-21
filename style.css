@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+     font-family: 'Open Sans', sans-serif;
+     line-height: 1.5;
+     font-size: 16px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav{
+     background-color: #fff;
+     padding: 1rem 1.5rem;  
+}
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+}
+.fixed-nav .links a{
+    color: #000;
+}
+.fixed-nav .links a:hover{
+    color: hsl(209, 50%, 60%);
+}
+.nav-header{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.logo{
+    height: 50px;
+}
+.toggle-btn{
+     border: transparent;
+     background: transparent;
+     font-size: 1.5rem;
+     cursor: pointer;
+     color: hsl(229, 92%, 10%);
+     transition: all 0.3s linear;
+}
+.toggle-btn:hover{
+    color: hsl(209, 50%, 60%);
+}
+.links-container{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+.show-links{
+    height: 200px;
+}
+.links a{
+    background: #fff;
+     display: block;
+     font-size: 1.1rem;
+     padding: 0.78rem 0;
+     color:hsl(229, 92%, 10%);
+     text-transform: capitalize;
+     font-weight: bold;
+     letter-spacing: 3px;
+     transition: all 0.3s linear;
+}
+.links a:hover{
+    color: hsl(209, 50%, 60%);
+}
+@media screen and (min-width: 800px) {
+     nav{
+        background: transparent;
+     }
+     .nav-center{
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     .toggle-btn{
+        display: none;
+     }
+     .links-container{
+         height: auto !important;
+     }
+     .links{
+        display: flex;
+     }
+     .links a{
+          background: transparent;
+          margin: 0 1rem;
+          font-size: 1.1rem;
+          font-weight: bold;
+          letter-spacing: 3px;
+          text-transform: capitalize;
+          color: #fff;
+          transition: all 0.3s linear;
+     }
+     .links a:hover{
+        color: #fff;
+     }   
+}
+/*hero*/
+header{
+     min-height: 100vh;
+     background-image: url('/heroImage/hero-bcg.jpeg');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.banner{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    
+}
+.banner{
+    text-align: center;
+}
+.container h1{
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-bottom: 0.75rem;    
+}
+.container p{
+    color: #fff;
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+}
+@media  screen and (min-width: 768px) {
+      .container p{
+        max-width: 40rem;
+      }
+}
+.btn{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #000;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.3s linear;
+    box-shadow:  0px 1px 3px  rgba(0,0,0,0.3);
+}
+.btn:hover{
+    color: #fff;
+    background: #000;
+}
+.btn-white{
+     color: #fff;
+     border-color:#fff;
+     border-radius: 0;
+     padding: 0.5rem 1rem;
+}
+.btn:hover{
+     background: #fff;
+     color: #000;
+}
+.title h2{
+     text-align: center;
+     text-transform: uppercase;
+}
+.title span{
+     color: hsl(174, 86%, 49%)
+}
+#about, #services, #tours{
+    min-height: 80vh;
+}
+footer{
+    background: darkcyan;
+    padding: 5rem 1rem;
+}
+footer p{
+     text-align: center;
+     text-transform: capitalize;
+     color: #fff;
+     letter-spacing: 3px;
+}
+.top-link{
+    position: fixed;
+    font-size: 1.1rem;
+    bottom: 7%;
+    right: 7%;
+    background-color: aquamarine;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5rem;
+    visibility: hidden;
+    z-index: -100;
+    animation: bounce 2s ease-in-out infinite;
+}
+.show-link{
+    visibility: visible;
+    z-index: 100;
+}
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
